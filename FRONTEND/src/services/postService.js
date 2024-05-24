@@ -1,14 +1,15 @@
 // Reemplazar por la URL de la API
-const URL_API = "http://localhost:3000/posts";
+const URL_API = "http://localhost:3000/api/like";
 
 export const getPosts = async () => {
-  const response = await fetch(URL_API);
-  const data = await response.json();
+  const response = await fetch(URL_API + "/get");
+  console.log("consulta tomanda:", response);
+  const { data } = await response.json();
   return data;
 };
 
 export const addPost = async (post) => {
-  const response = await fetch(URL_API, {
+  const response = await fetch(URL_API + "/create", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -20,7 +21,7 @@ export const addPost = async (post) => {
 };
 
 export const deletePost = async (id) => {
-  await fetch(`${URL_API}/${id}`, {
+  await fetch(URL_API + "/delete/" + `${id}`, {
     method: "DELETE",
   });
 };
