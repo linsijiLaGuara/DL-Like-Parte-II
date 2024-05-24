@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "bfc422e9-ac30-462f-9d23-f5b3f83319b2",
+		"name": "Like",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5507815"
+	},
+	"item": [
+		{
+			"name": "consulta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/like/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"like",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agregar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n  \r\n      \"titulo\": \"perrito lindo\",\r\n      \"img\":\"  https://img.freepik.com/foto-gratis/perrito-joven-posando-alegre_155003-28765.jpg?size=626&ext=jpg&ga=GA1.1.1788068356.1716508800&semt=sph,\",\r\n      \"descripcion\":\"servcios de cachorros\"\r\n\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/like/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"like",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"titulo\": \"camada\",\r\n    \"img\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8_B0zPLNLGCb9KRnu_4IvUVpkpmUSzIJTzAWqeERTWg&s\",\r\n    \"descripcion\": \"actualizando\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/like/put/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"like",
+						"put",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"titulo\": \"qqq\",\r\n    \"img\": null,\r\n    \"descripcion\": \"qqq\",\r\n    \"likes\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/like/delete/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"like",
+						"delete",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
