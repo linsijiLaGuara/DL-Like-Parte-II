@@ -1,0 +1,10 @@
+POST http://localhost:3000/api/like/posts
+Content-Type: application/json
+{
+  "titulo":"perro",
+  "img":"https://imagenes.eltiempo.com/files/image_1200_600/uploads/2023/01/05/63b73981e5a99.jpeg",
+  "descripcion": "cualquie"
+}
+###
+GET  http://localhost:3000/api/like/posts
+Content-Type: application/json
