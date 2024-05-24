@@ -16,7 +16,7 @@ export const addPost = async (post) => {
     },
     body: JSON.stringify(post),
   });
-  const data = await response.json();
+  const { data } = await response.json();
   return data;
 };
 
@@ -27,7 +27,7 @@ export const deletePost = async (id) => {
 };
 
 export const likePost = async (id) => {
-  await fetch(`${URL_API}/like/${id}`, {
+  await fetch(URL_API + "/put/" + `${id}`, {
     method: "PUT",
   });
 };

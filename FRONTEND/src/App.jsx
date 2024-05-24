@@ -1,6 +1,6 @@
 import { successToast, errorToast } from "./utils/toast";
 import { useEffect, useState } from "react";
-
+import { v4 as uuidv4 } from "uuid";
 import {
   getPosts,
   addPost,
@@ -25,7 +25,8 @@ export default function App() {
   }, []);
 
   const createPost = (post) => {
-    addPost(post)
+    const newPost = { ...post, id: uuidv4() };
+    addPost(newPost)
       .then((data) => {
         setPosts([...posts, data]);
         successToast("Post creado correctamente");
@@ -73,10 +74,10 @@ export default function App() {
           </div>
         </section>
         <section className="col-12 col-md-4 mt-5">
-          {posts.map((post) => {
+          {posts.map((post, index) => {
             return (
               <CardPost
-                key={post.id}
+                key={post.id || index} // Fallback key
                 post={post}
                 deletePostById={deletePostById}
                 likePostById={likePostById}
