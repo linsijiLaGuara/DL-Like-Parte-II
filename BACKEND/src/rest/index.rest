@@ -1,10 +1,23 @@
-POST http://localhost:3000/api/like/posts
+POST http://localhost:3000/api/like/create
 Content-Type: application/json
-{
-  "titulo":"perro",
-  "img":"https://imagenes.eltiempo.com/files/image_1200_600/uploads/2023/01/05/63b73981e5a99.jpeg",
-  "descripcion": "cualquie"
-}
+   {
+  
+      "titulo": "perrito blanco",
+      "img":"  https://img.freepik.com/foto-gratis/perrito-joven-posando-alegre_155003-28765.jpg?size=626&ext=jpg&ga=GA1.1.1788068356.1716508800&semt=sph,",
+      "descripcion":"servcios de cachorros"
+
+    }
+
 ###
-GET  http://localhost:3000/api/like/posts
+GET  http://localhost:3000/api/like/get
 Content-Type: application/json
+####
+PUT http://localhost:3000/api/like/posts
+Content-Type: application/json
+   {
+      "id": 2,
+      "titulo": "asd",
+      "img": null,
+      "descripcion": "asd",
+      "likes": null
+    }

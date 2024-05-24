@@ -3,7 +3,7 @@ const { likeCollection } = require("../database/models/likesModels");
 const add_like_controller = async (req, res, next) => {
   try {
     const { titulo, img, descripcion } = req.body;
-    const response = likeCollection.AddLike(titulo, img, descripcion);
+    const response = await likeCollection.AddLike(titulo, img, descripcion);
     res.send(response);
   } catch (error) {
     next(error);

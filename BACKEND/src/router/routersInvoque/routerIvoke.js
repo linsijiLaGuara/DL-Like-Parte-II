@@ -7,17 +7,17 @@ const {
 } = require("../../controller/controllersLike");
 const { ValidatorCollectionLike } = require("../../validators/validatorsLike");
 
-router.get("/posts", get_like_controller);
+router.get("/get", get_like_controller);
 router.post(
-  "/posts",
+  "/create",
   ValidatorCollectionLike.addValidator,
   add_like_controller
 );
 router.put(
-  "/posts/:id",
+  "/put/:id",
   ValidatorCollectionLike.updateValidator,
   update_like_controller
 );
-router.delete("/posts/:id", delete_like_controller);
+router.delete("/delete/:id", delete_like_controller);
 
 module.exports = router;
